@@ -74,12 +74,8 @@ class Cart():
         """
         # your code goes here!
         for product in self.products:
-            print("Here's your receipt:")
-            # for cart_product in self.products:
             print("\t Product Name: %s \n\t Description: %s \n\t Price: SR %s\n" 
                     % (product.name, product.description, product.price))
-
-        print("Your total price is: SR %s" % str(self.get_total_price()))
 
 
     def checkout(self):
@@ -87,14 +83,10 @@ class Cart():
         Does the checkout.
         """
         # your code goes here!
-        # for checkout in self.products:
         self.print_receipt()
 
-        # total_price_of_shopping = 0.0
+        print("Your total price is: SR %s" % str(self.get_total_price()))
 
-        # total_price_of_shopping += self.get_total_price()
-
-        # print("Your total price is: SR %s" % str(total_price_of_shopping))
         user_confirm = input("Confirm?(Yes/No): ")
 
         if user_confirm == "yes":
